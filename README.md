@@ -7,7 +7,7 @@ Enterprise Integration Pattern (EIP) demonstrator as multimedia CPN extension of
 2. Working internet connection
 3. JDK8 (eg, from [Oracle](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html?printOnly=1))
 4. CPN Tools version 4 (eg, from [CPN Tools](http://cpntools.org/2018/01/16/download/))
-5. PostgresSQL version 10 (eg, from [PostgresSQL](https://www.postgresql.org/download/))
+5. OpenCV version XXX (eg, from []()
 
 ## Simulating the patterns
 
