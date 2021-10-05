@@ -4,7 +4,7 @@ MM_NET_JAR=mmnet-0.0.1.jar
 MAIN_CLASS="org.cpntools.simulator.extensions.server.DiscoveryServer"
 
 all: ./libs/javacv.jar ./HaarCascade/yolov4.weights
-	java -cp '${MM_NET_JAR}:libs/*'  ${MAIN_CLASS}
+	java -cp '${MM_NET_JAR};libs/*'  ${MAIN_CLASS}
 
 ./libs/javacv.jar:
 	-mkdir -p libs
