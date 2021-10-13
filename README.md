@@ -7,14 +7,9 @@ Enterprise Integration Pattern (EIP) demonstrator as multimedia CPN extension of
 2. Working internet connection
 3. JDK8 (eg, from [Oracle](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html?printOnly=1))
 4. CPN Tools version 4 (eg, from [CPN Tools](http://cpntools.org/2018/01/16/download/))
-5. OpenCV version 4.5.1 (eg, from [OpenCV 4.5.1 for Windows (Sourceforge)](https://sourceforge.net/projects/opencvlibrary/files/4.5.1/opencv-4.5.1-vc14_vc15.exe/download)
-5.1 The OpenCV Java-dll has to be accessible for Java, this can be achieved by
-adding the Java-dll to the %PATH% Variable on Windows (regarding OpenCV 4.5.1
-this file would be `opencv_java451.dll`)
-6. Recommended: Cygwin to install further needed dependency (JavaCV 1.5.4) and
-to start the extension.
+5. Recommended: Cygwin to install further needed dependencies (JavaCV 1.5.4, OpenCV 4.4.0) and to start the extension.
     * Needed tools: `make`, `wget`, `unzip`, `mv`, `rm`, `mkdir`
-    * Run `make`
+    * Run `make`: Downloading dependencies will take some time and around 2.5 GB of disk space
 
 ## Simulating the patterns
 
