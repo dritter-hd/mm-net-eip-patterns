@@ -7,26 +7,41 @@ Enterprise Integration Pattern (EIP) demonstrator as multimedia CPN extension of
 2. Working internet connection
 3. JDK8 (eg, from [Oracle](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html?printOnly=1))
 4. CPN Tools version 4 (eg, from [CPN Tools](http://cpntools.org/2018/01/16/download/))
-5. OpenCV version XXX (eg, from []()
+5. Recommended: Cygwin to install further needed dependencies (JavaCV 1.5.4, OpenCV 4.4.0) and to start the extension.
+    * Needed tools: `make`, `wget`, `unzip`, `mv`, `rm`, `mkdir`
+    * Run `make`: Downloading dependencies will take some time and around 2.5 GB of disk space
 
 ## Simulating the patterns
 
-1. Run the `mmnet.jar` to start the extension server (`java -jar mmnet.jar`); check the icon in the toolbar and double-click to check that the db-net extension is registered.
-2. start the PostgresSQL database (eg, type Start PostgresSQL 10 in Win10 search field) and load database schema from the pattern folder, e.g., aggregator.sql (eg, using pgAdmin)
-3. start the CPN Tools (eg, type CPN Tools in Win10 search field).
-4. Load pattern model, e.g., `aggregator.cpn`, through right-click and `load model`.
-5. (a window will open) enter your database credentials and host / port settings and connect to database (eg, localhost on port `5432` with user credentials).
-![pic1](pictures/db-connector.png#center)
-![pic2](pictures/db-connector-connected.png#center)
+1. Run the `mmnet.jar` to start the extension server (`make`);
+check the icon in the toolbar and double-click to check that the mm-net
+extension is registered. Make sure that the command is executed within the
+folder, such that the HaarCascade subdirectory is at the relative path
+`./HaarCascade`, allowing the extension to find relevant files.
+2. start the CPN Tools (eg, type CPN Tools in Win10 search field).
+3. Load pattern model, e.g., `aggregator.cpn`, through right-click and `load model`.
+![pic-connector](pictures/mmnet-connector.png#center)
 
-6. Right click on the `connect` artifact in the model and select `excecute ML` **OR** select ML in the CPN Toolbar and drag and drop there.
-![pic3](pictures/connectDB-right-click.png#center)
+4. Right click on the `connect` artifact in the model and select `excecute ML`
+**OR** select ML in the CPN Toolbar and drag and drop there.
+`Connect CPN/COMMS` Button on the extension GUI
+![pic-connect-right-click](pictures/pic-connect-right-click.png#center)
 
 
-7. Enter the port configured in the connect artifact into the extension GUI and connect CPN/COMM (default `9001`).
-![pic4](pictures/comm-connected.png#center)
-8. Start executing enabled transitions.
-![pic5](pictures/fire-transition.png#center)
+5. Enter the port configured in the connect artifact into the extension GUI and connect CPN/COMM (default `9001`).
+![comm-connected](pictures/comm-connected.png#center)
+6. Start executing enabled transitions.
+![pic-fire-transition](pictures/fire-transition.png#center)
+
+## Tips and Tricks
+- If images are loaded but places and or viewplaces are not populated, changing
+  the inscription (e.g. adding a space) will lead to a recalculation, allowing
+  to display the correct tokens.
+- Sometimes even though transitions should be able to fire they are not enabled,
+  saving the current net sometimes seems to *release* the internal confusion
+  of CPN Tools, which may lead to correctly enabled transitions.
+- Large sized pictures can need a longer time to be classified, most of the time using a
+  downscaled image will yield the same classification in less time
 
 ## License
 
@@ -75,6 +90,6 @@ for theoretical foundations, and / or the extended version (incl. detailed execu
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BHCBCD9WRYS6&source=url)
 
-or 
+or
 
 <a href="https://www.buymeacoffee.com/dritter" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
