@@ -46,11 +46,9 @@ folder, such that the HaarCascade subdirectory is at the relative path
   
 ## Demonstration
 
-Cudos to Marc for recording this short video on how to run the provided MM-net example model.
+Kudos to Marc for recording this short video on how to run the provided MM-net example model.
 
-[![Watch the video]()](https://youtu.be/5e1jANe0gGA)
-
-
+[![Watch the video](https://user-images.githubusercontent.com/5695003/181925525-d26ecd15-5848-41f7-8425-34879eeea5b7.jpg)](https://youtu.be/5e1jANe0gGA)
 
 ## License
 
