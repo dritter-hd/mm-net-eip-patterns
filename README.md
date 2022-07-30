@@ -43,6 +43,14 @@ folder, such that the HaarCascade subdirectory is at the relative path
   of CPN Tools, which may lead to correctly enabled transitions.
 - Large sized pictures can need a longer time to be classified, most of the time using a
   downscaled image will yield the same classification in less time
+  
+## Demonstration
+
+Cudos to Marc for recording this short video on how to run the provided MM-net example model.
+
+[![Watch the video]()](https://youtu.be/vt5fpE0bzSY)
+
+
 
 ## License
 
