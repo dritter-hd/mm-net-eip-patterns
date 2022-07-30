@@ -5,11 +5,12 @@ Enterprise Integration Pattern (EIP) demonstrator as multimedia CPN extension of
 
 1. Windows 10 (due to the CPN Tools, sorry guys)
 2. Working internet connection
-3. JDK8 (eg, from [Oracle](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html?printOnly=1))
+3. JDK15 (eg, from [Oracle](https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html))
 4. CPN Tools version 4 (eg, from [CPN Tools](http://cpntools.org/2018/01/16/download/))
 5. Recommended: Cygwin to install further needed dependencies (JavaCV 1.5.4, OpenCV 4.4.0) and to start the extension.
     * Needed tools: `make`, `wget`, `unzip`, `mv`, `rm`, `mkdir`
     * Run `make`: Downloading dependencies will take some time and around 2.5 GB of disk space
+    * The JVM is configured to take up to 6GB of memory
 
 ## Simulating the patterns
 
