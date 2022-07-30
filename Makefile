@@ -1,13 +1,13 @@
 YOLO_WEIGHTS_URL=https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
 BYTEDECO_OPENCV_URL=https://github.com/bytedeco/javacv/releases/download/1.5.4/javacv-platform-1.5.4-bin.zip
-MM_NET_JAR=mmnet-0.0.1.jar
+MM_NET_JAR=mmnet-0.0.2.jar
 MAIN_CLASS="org.cpntools.simulator.extensions.server.DiscoveryServer"
 OPENCV_URL=https://github.com/opencv/opencv/releases/download/4.4.0/opencv-4.4.0-vc14_vc15.exe
 
 export PATH := $(shell pwd)/opencv/opencv/build/java/x64:$(PATH)
 
 all: ./libs/javacv.jar ./HaarCascade/yolov4.weights-downloaded ./opencv/opencv/build/java/x64
-	java -cp '${MM_NET_JAR};libs/*'  ${MAIN_CLASS}
+	export _JAVA_OPTIONS="-Xmx6144m" && java -cp '${MM_NET_JAR};libs/*'  ${MAIN_CLASS}
 
 ./libs/javacv.jar:
 	-mkdir -p libs
